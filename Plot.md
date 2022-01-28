@@ -90,3 +90,66 @@ for (i in 1:6) {
   )
 }
 ```
+
+# Heatmap
+```{r}
+#heatmap
+load("/users/PAS1475/liuzeyi/guoqi/output/sample6_clusters.RData")
+#express data
+setwd("/users/PAS1475/liuzeyi/guoqi/output/AD_Control_DEG")
+deg <- read.csv("Layer marker for heatmap.csv")
+expr_data <- as.data.frame(sample6.combined@assays$SCT@data[deg$Marker,])
+expr_data<-rbind(expr_data,layer=sample6.combined$Layer)
+expr_data<-as.data.frame(t(expr_data))
+temp_data<-data.frame(rep(0,7))
+for(j in 1:21){
+  gene_data<-c()
+  for(i in sort(unique(expr_data$layer))){
+    temp_gene<-mean(as.numeric(expr_data[which(expr_data$layer==i),j]))
+    gene_data<-c(gene_data,temp_gene)
+  }
+  temp_data<-cbind(temp_data,gene_data)
+}
+temp_data<-temp_data[,-1]
+rownames(temp_data)<-sort(unique(expr_data$layer))
+colnames(temp_data)<-deg$Marker
+heatmap_data<-t(temp_data)
+#plot
+my_colour = list(
+  gene_cat = c( Layer_1 = brewer.pal(n = 7, name = "Dark2")[1],
+                Layer_2 = brewer.pal(n = 7, name = "Dark2")[2],
+                Layer_3 = brewer.pal(n = 7, name = "Dark2")[3],
+                Layer_4 = brewer.pal(n = 7, name = "Dark2")[4],
+                Layer_5 = brewer.pal(n = 7, name = "Dark2")[5],
+                Layer_6 = brewer.pal(n = 7, name = "Dark2")[6],
+                White_Matter = brewer.pal(n = 7, name = "Dark2")[7]))
+gene_cat_val <- as.numeric(table(deg$Layer))
+gene_anno <- data.frame(gene_cat = c(rep("Layer_1",as.numeric(table(deg$Layer)[1])),
+                                     rep("Layer_2",as.numeric(table(deg$Layer)[2])),
+                                     rep("Layer_4",as.numeric(table(deg$Layer)[3])),
+                                     rep("Layer_5",as.numeric(table(deg$Layer)[4])),
+                                     rep("Layer_6",as.numeric(table(deg$Layer)[5])),
+                                     rep("White_Matter",as.numeric(table(deg$Layer)[6]))
+) )
+library("pheatmap")
+p <- pheatmap(heatmap_data,
+              gaps_row = cumsum(gene_cat_val),
+              cluster_rows = F,
+              cluster_cols = F,
+              scale = "row",
+              border_color = NA,
+              annotation_colors = my_colour, 
+              #annotation_row = gene_anno,
+              labels_col =rownames(temp_data),
+              color = colorRampPalette(c("blue","white","red"))(100))
+
+ggsave(
+  plot = p,
+  filename = "/users/PAS1475/liuzeyi/guoqi/output/picture/integrating landscape/heatmap_revised.tiff",
+  device = "tiff",
+  dpi = 150,
+  width = 7,
+  height = 11,
+  units = "in"
+)
+```
