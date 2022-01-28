@@ -22,3 +22,15 @@ library(xlsx, lib.loc = "/fs/scratch/PCON0022/liyang/lib")
 ```{r}
 specific<-excel_sheets(path = "DEGs of WFS1AT8 v.s. level 123 in layer 2-specific-separate level.xlsx")
 ```
+# qs
+```{r}
+###qs
+library(qs)
+#read
+raw<-qread(file = 'F:/20180401.qs')
+#save
+qsave(raw, file = 'F:/20180401.qs')
+#save many variables in R environment
+library(rlang)
+qsavem(LEV,offroad,p,plotdata,raw,result,file = 'F:/myopjects.qs')
+```
