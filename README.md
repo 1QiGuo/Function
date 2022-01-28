@@ -94,6 +94,42 @@ RunPathway_human <- function(Seurat.DEGs = NULL) {
   return(final.data)
 }
 ```
+
+GO enrichment analysis
+Note: input is character format
+```{r}
+GOenrichment_human <- function(Seurat.DEGs = NULL) {
+  library(org.Hs.eg.db)
+  library(clusterProfiler)
+  genes.use <- Seurat.DEGs
+  #Obtain a GO object
+  GO_pathway <-
+    enrichGO(
+      gene = genes.use,
+      OrgDb = org.Hs.eg.db,
+      ont = "BP",
+      keyType = "SYMBOL",
+      pAdjustMethod = "BH",
+      pvalueCutoff = 0.05,
+      qvalueCutoff = 0.4
+    )
+  
+  if (is.null(GO_pathway)) {
+    GO_simplied_res <-
+      as.data.frame(cbind(NO_results = "NO_result_for_GO"))
+  } else{
+    #GO_res <- simplify(GO_pathway)
+    GO_simplied_res <-
+      GO_pathway@result[GO_pathway@result$pvalue < 0.05, ]
+    dim(GO_simplied_res)
+    if (dim(GO_simplied_res)[1] == 0) {
+      GO_simplied_res <-
+        as.data.frame(cbind(NO_results = "NO_result_for_GO"))
+    }
+  }
+  return(GO_simplied_res)
+}
+```
 ## Fisher test
 input: (character)-gene set1, gene set2, dataset1 containing all gene set1, dataset2 containing all gene set2. (union)
 output: (dataframe)-Intersect number of gene set1 and gene set2. odd_ratio(a correlation between group1 and group2)
