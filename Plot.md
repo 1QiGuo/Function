@@ -158,3 +158,29 @@ ggsave(
   units = "in"
 )
 ```
+
+# Dot plot for enrichment analysis
+```{r}
+library(ggplot2)
+setwd("/users/PAS1475/liuzeyi/guoqi/output/picture/module_4_enrichment_dot")
+for(i in 1:4){
+  g<-ggplot(module4[[i]], # you can replace the numbers to the row number of pathway of your interest
+            aes(x = GeneRatio_num, y = Description)) + 
+    geom_point(aes(size = Count, color = p.adjust)) +
+    theme_bw(base_size = 14) +
+    theme(axis.text = element_text(size = 14, face = "bold"),
+    )+
+    scale_colour_gradient(limits=NULL, low="red",high="blue") +
+    ylab(NULL) +
+    ggtitle("GO enrichment")
+  ggsave(
+    plot = g,
+    filename = paste0(names(module4)[i],"_enrichment.tiff"),
+    device = "tiff",
+    dpi = 150,
+    width = 10,
+    height = 10,
+    units = "in"
+  )
+}
+```
