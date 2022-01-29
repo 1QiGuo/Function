@@ -163,6 +163,16 @@ ggsave(
 ```{r}
 library(ggplot2)
 setwd("/users/PAS1475/liuzeyi/guoqi/output/picture/module_4_enrichment_dot")
+module4<-list()
+for(i in 1:4){
+  temp<-read_excel("No.10, 4 modules GO pathway.xlsx", sheet = i)
+  temp_sort<-temp[with(temp, order(Count)), ]
+  temp_sort$Description<-factor(temp_sort$Description,levels=(temp_sort$Description))
+  count_sum<-as.numeric(unlist(strsplit(temp_sort$GeneRatio[1],split="/"))[2])
+  temp_sort$GeneRatio_num<-c(temp_sort$Count)/count_sum
+  module4[[i]]<- temp_sort
+}
+names(module4)<-excel_sheets(path = "No.10, 4 modules GO pathway.xlsx")
 for(i in 1:4){
   g<-ggplot(module4[[i]], # you can replace the numbers to the row number of pathway of your interest
             aes(x = GeneRatio_num, y = Description)) + 
