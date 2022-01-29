@@ -93,7 +93,12 @@ for (i in 1:6) {
 
 # Heatmap
 ```{r}
-#heatmap
+#load library
+library(RColorBrewer)
+library("pheatmap")
+libary("ggplot2")
+
+#load data
 load("/users/PAS1475/liuzeyi/guoqi/output/sample6_clusters.RData")
 #express data
 setwd("/users/PAS1475/liuzeyi/guoqi/output/AD_Control_DEG")
@@ -131,7 +136,7 @@ gene_anno <- data.frame(gene_cat = c(rep("Layer_1",as.numeric(table(deg$Layer)[1
                                      rep("Layer_6",as.numeric(table(deg$Layer)[5])),
                                      rep("White_Matter",as.numeric(table(deg$Layer)[6]))
 ) )
-library("pheatmap")
+
 p <- pheatmap(heatmap_data,
               gaps_row = cumsum(gene_cat_val),
               cluster_rows = F,
