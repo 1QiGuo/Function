@@ -194,3 +194,30 @@ for(i in 1:4){
   )
 }
 ```
+# bar plot
+## geom_bar
+highest is 1
+cell components
+```{r}
+#data
+cell.prop<-as.data.frame(prop.table(table(Idents(heart_all), heart_all$time)))
+#plot
+ggplot(cell.prop,aes(time,proportion,fill=cluster))+
+  
+  geom_bar(stat="identity",position="fill")+
+  
+  ggtitle("")+
+  
+  theme_bw()+
+  
+  theme(axis.ticks.length=unit(0.5,'cm'))+
+  
+  guides(fill=guide_legend(title=NULL))
+```
+## geom_col
+highest number do not have limitation
+umi propotion
+```{r}
+ggplot(cell.umi,aes(time,cell_umi,fill=cell_type))+
+  geom_col(aes(fill=cell_type))
+```
