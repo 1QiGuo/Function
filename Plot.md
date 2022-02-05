@@ -194,6 +194,25 @@ for(i in 1:4){
   )
 }
 ```
+# Point plot
+geom_point
+```{r}
+library("ggrepel")#annotation for point on the plot and avoiding text shield point
+ggplot(all_re,aes(x=mean_6,y=logfc))+
+  geom_point(size=5)+
+  xlab("Average of expression")+
+  ylab("Logfc")+
+  labs(title = "WGCNA modules")+
+  theme(
+    axis.text = element_text(size = 15)
+  )+
+  geom_text_repel(label = color,size=7)+
+  theme_bw()+#remove background color
+  theme(legend.position = "none")+
+  theme(axis.title.y = element_text(size = 25),
+        axis.title.x = element_text(size=25,vjust = 0.5, hjust = 0.45),
+        plot.title = element_text(size = 30))
+```
 # bar plot
 ## geom_bar
 highest is 1
