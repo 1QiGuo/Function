@@ -17,3 +17,8 @@ end with tar.gz-tar
 ```{r}
 tar zxvf FileName.tar.gz
 ```
+# Copy file
+```{r}
+cd originalpath
+cp file targetpath
+```
