@@ -15,4 +15,4 @@
 [Markdown](http://blog.csdn.net/zhaokaiqiang1992)
 
 # Order a list
- ![example](order_a_list_in markdown.png)
+ ![Alt text](order_a_list_in markdown.png)
