@@ -7,7 +7,7 @@ output is a vector
 a <- c("3_k","4_f","2_t","8_s")
 b <- strsplit(a, "_")
 c <- sapply(b, "[",1)
-print(c)
+c
 ```
 ### lapply
 output is a list
