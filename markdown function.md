@@ -10,3 +10,9 @@
 在需要换行的地方输入至少两个空格，然后回车即可.
 此处需要换行  
 。
+
+# Link
+[Markdown](http://blog.csdn.net/zhaokaiqiang1992)
+
+# Order a list
+![example](order.png)
