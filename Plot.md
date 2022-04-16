@@ -240,3 +240,10 @@ umi propotion
 ggplot(cell.umi,aes(time,cell_umi,fill=cell_type))+
   geom_col(aes(fill=cell_type))
 ```
+# batch output plot (not sure)
+```{r}
+p
+tiff(filename = "/users/PAS1475/liuzeyi/guoqi/output/picture/heatmap/Figure4-heatmap-up-genes-layer.tiff",units = "in",width = 10,height = 20,res = 100)
+p
+dev.off()
+```
