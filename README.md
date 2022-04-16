@@ -130,6 +130,25 @@ GOenrichment_human <- function(Seurat.DEGs = NULL) {
   return(GO_simplied_res)
 }
 ```
+
+showing specific categroies
+input is a dataframe which consist of selected categroies
+```{r}
+library(multienrichjam)
+multi<-enrichDF2enrichResult(module4[["Pink"]])#go object
+#plot
+p<-dotplot(multi,font.size=20)
+#Note: if the plot have decimals count number(range of reference, do not stand for any real meaning) and you don't want them.
+#solve count decimals problem
+min = min(target_data$Count)
+max = max(target_data$Count)
+# 10 is length
+step = ceiling((max-min)/5)
+p <- p + scale_size_continuous(breaks=seq(min, max, by=step))
+p<-p+ theme(legend.key.size = unit(1.0, 'cm'),
+           legend.title = element_text(size=18), #change legend title font size
+           legend.text = element_text(size=18))
+```
 ## Fisher test
 input: (character)-gene set1, gene set2, dataset1 containing all gene set1, dataset2 containing all gene set2. (union)
 output: (dataframe)-Intersect number of gene set1 and gene set2. odd_ratio(a correlation between group1 and group2)
