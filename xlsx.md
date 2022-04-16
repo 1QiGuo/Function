@@ -3,6 +3,12 @@
 library("readxl")
 up_deg <- read_excel("No.4, AD vs nonAD GO for dot plot.xlsx", sheet = 1)
 ```
+
+Second method- more direct
+```{r}
+library(openxlsx)
+AD_DEGs_up <- read.xlsx("/users/PAS1475/liuzeyi/guoqi/output/picture/heatmap/Fig4 heatmap genelist.xlsx",sheet = 1)
+```
 # Write xlsx
 ```{r}
 dyn.load(
