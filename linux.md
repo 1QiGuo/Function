@@ -1,8 +1,8 @@
 # Change permissions
 ## change all document in this file
 chmod /fs/project/PAS1475/guoqi/spatial_data/ -R 777  
-chmod -R 777 *
-**Note: do not using blank when name folder**  
+chmod -R 777 *  
+**Note: do not use blank when name folder**  
 
 ## compress and decompress file 
 ### compress
