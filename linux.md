@@ -24,3 +24,14 @@ tar zxvf FileName.tar.gz
 cd originalpath
 cp file targetpath
 ```
+
+# R  
+## start R in terminal
+```{r}
+module load R/4.1.0-gnu9.1
+R
+```
+## quit R in terminal
+```{r}
+quit()
+```
