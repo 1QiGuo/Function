@@ -41,7 +41,10 @@ conda activate spagft
 ```{r}
 conda deacticate
 ```
-
+## Delete a conda
+```{r}
+conda remove -n condaname all
+```
 ## Look up all conda environment  
 ```{r}
 conda env list
