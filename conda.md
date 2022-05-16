@@ -39,7 +39,7 @@ conda activate spagft
 ```  
 ## Quit the new conda environment
 ```{r}
-conda deacticate
+conda deactivate
 ```
 ## Delete a conda
 ```{r}
