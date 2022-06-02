@@ -35,3 +35,10 @@ R
 ```{r}
 quit()
 ```
+# load JOB on server
+```{linux}
+#upload
+sbatch xxx.sh
+#supervise
+qstat jobname
+```
