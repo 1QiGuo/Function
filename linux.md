@@ -42,3 +42,7 @@ sbatch xxx.sh
 #supervise
 qstat jobname
 ```
+# transfer file by remote server
+```{r}
+scp -r guoqi@192.148.247.179:/fs/ess/PCON0022/guoqi/NC-snrna/atac_output/temp ./rawdata/temp
+```
