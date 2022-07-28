@@ -1,0 +1,5 @@
+#activate python in myenv conda
+/users/PAS1475/guoqi/.conda/envs/myenv/bin/python3    
+
+#install packages
+/users/PAS1475/guoqi/.conda/envs/myenv/bin/pip install scanpy
