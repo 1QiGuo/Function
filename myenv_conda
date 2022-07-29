@@ -3,3 +3,8 @@
 
 #install packages
 /users/PAS1475/guoqi/.conda/envs/myenv/bin/pip install scanpy
+
+#add conda environment to jupyter
+#activate conda env
+conda activate cell2loc_env
+ipython kernel install --user --name=cell2loc_env
