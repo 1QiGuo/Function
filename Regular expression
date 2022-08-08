@@ -1,0 +1,3 @@
+# *
+If you want to move multiple files that contain same character from a directory to another directory
+mv *B2* ./B2/
