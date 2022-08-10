@@ -22,3 +22,23 @@ It is one of the principal tissue stains used in histology.
 ## HE stain
 1. A freshly frozen tissue section attached onto our chip
 2. The tissue section is imaged in order to retrieve histological information.
+
+## The Array
+The chip contain an array of distinguishable capture probes. The Poly-T tails of these capture probes can bind the Poly-A tails of RNA molecules.
+
+## Tissue fixtion
+Fix tissue on the chip
+
+## Permeabilisation
+1. The tissue is permeabilised with our Permeabilising Reagent which means that small holes in the cell membrane are created
+2. RNA molecules can exit the cells through these and bind to the adjacent capture probes on the chip
+3. The following steps are needed to translate the information stored in the captured RNA molecules as data.
+
+## cDNA Synthesis
+1. Create stable double stranded DNA molecules. This is necessary because cDNA-RNA-hybrids are degraded
+
+## Library Preparation
+1. The cDNA-RNA-hybrids are cleaved off the chip
+
+## Massively Parallel Sequencing
+The created libraries are sequenced. Thereby information on what gene the captured RNA was coding for and where in the tissue the RNA came from is extracted. 
