@@ -39,7 +39,7 @@ Fishertest_show<-function(gene1,gene2,dataset1,dataset2){
 }
 ```
 
-Ajusted p value:
+# Ajusted p value:
 adjust p value can only caculate a group of p value at a time and generate a group of adj_p value
 ```{r}
 p.adj of p in a row<-p.adjust(result_fisher$P.value[which(result_fisher$Module==names(eight_modules)[i])],method = "fdr",ncol(result_fisher)
