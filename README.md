@@ -395,3 +395,8 @@ mouse <- useMart("ensembl",dataset="mmusculus_gene_ensembl")
 geneMn <- rownames(mtx)
 geneHs <- getLDS(attributes = "mgi_symbol",filters="mgi_symbol",values= geneMn,mart=mouse,attributesL = "hgnc_symbol",martL=human,uniqueRows = TRUE)
 ```
+# match
+```{r}
+match(x,y)
+#return the location of x in y
+```
