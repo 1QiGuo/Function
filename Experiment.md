@@ -50,3 +50,10 @@ The created libraries are sequenced. Thereby information on what gene the captur
 2. Characterizing both large numbers of cells and centimetre-scale tissue architectures. 
 3. Imaging RNAs within their native context, it is sometimes possible to limit RNA loss
 Hence, it has high detection efficiencies and low detection limits, important sets of functionally relevant but lowly expressed genes to be characterized. 
+
+## Application
+1. Providing insights into gene regulatory modules from co-variation in gene expression;
+2. Mapping the internal organization of the transcriptome
+3. Empow- ering all-optical screening methods by linking genetic perturbations to synthetic RNA barcodes52–58;
+4. Inferring aspects of cellular state from RNA-velocity-like measure- ments of nuclear to cytoplasmic RNAs50
+5. Jointly mapping the internal distribution of RNAs and proteins
