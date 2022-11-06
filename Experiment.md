@@ -17,7 +17,7 @@ It is one of the principal tissue stains used in histology.
 2. Eosin stains the **extracellular matrix and cytoplasm pink**, with other structures taking on different shades, hues, and combinations of these colors
 
 
-# Spatial transcriptomics (Spatial)
+# Spatial transcriptomics (Visium)
 [official website](https://spatialtranscriptomics.com/workflow/)
 ## HE stain
 1. A freshly frozen tissue section attached onto our chip
@@ -42,3 +42,11 @@ Fix tissue on the chip
 
 ## Massively Parallel Sequencing
 The created libraries are sequenced. Thereby information on what gene the captured RNA was coding for and where in the tissue the RNA came from is extracted. 
+
+# Imgae-based spatial transcriptomics
+
+## Advantage
+1. Map the sub-micrometre-scale intercellular organization of the transcriptome 
+2. Characterizing both large numbers of cells and centimetre-scale tissue architectures. 
+3. Imaging RNAs within their native context, it is sometimes possible to limit RNA loss
+Hence, it has high detection efficiencies and low detection limits, important sets of functionally relevant but lowly expressed genes to be characterized. 
