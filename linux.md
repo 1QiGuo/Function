@@ -42,6 +42,7 @@ sbatch xxx.sh
 #supervise
 qstat jobname
 qstat -u guoqi
+https://maveric-informatics.readthedocs.io/en/latest/OSC.html
 ```
 # transfer file by remote server
 ```{r}
