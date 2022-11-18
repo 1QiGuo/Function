@@ -41,6 +41,7 @@ quit()
 sbatch xxx.sh
 #supervise
 qstat jobname
+qstat -u guoqi
 ```
 # transfer file by remote server
 ```{r}
