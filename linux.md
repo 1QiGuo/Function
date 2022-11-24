@@ -11,6 +11,10 @@ gzip FileName
 ```
 
 ### decompress file
+end with zip
+```{r}
+unzip FileName.gz
+```
 end with gz--gzip
 ```{r}
 gzip -d FileName.gz
