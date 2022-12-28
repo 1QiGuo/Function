@@ -248,4 +248,5 @@ p
 dev.off()
 ```
 # color
-## [polychrome](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cran.r-project.org/web/packages/Polychrome/Polychrome.pdf) 
+## [polychrome](https://cran.r-project.org/web/packages/Polychrome/vignettes/polychrome.html)
+
