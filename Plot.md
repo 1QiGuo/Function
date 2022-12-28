@@ -247,3 +247,5 @@ tiff(filename = "/users/PAS1475/liuzeyi/guoqi/output/picture/heatmap/Figure4-hea
 p
 dev.off()
 ```
+# color
+## [polychrome](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cran.r-project.org/web/packages/Polychrome/Polychrome.pdf) 
