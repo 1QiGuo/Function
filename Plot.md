@@ -249,4 +249,9 @@ dev.off()
 ```
 # color
 ## [polychrome](https://cran.r-project.org/web/packages/Polychrome/vignettes/polychrome.html)
+It can generate 26 colors.
+
+## [ggsci](https://cran.r-project.org/web/packages/ggsci/vignettes/ggsci.html)
+Colors are all from distinctive journals.
+9 colors
 
