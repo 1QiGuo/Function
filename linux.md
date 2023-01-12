@@ -13,7 +13,7 @@ gzip FileName
 ### decompress file
 end with zip
 ```{r}
-unzip FileName.gz
+unzip FileName.zip
 ```
 end with gz--gzip
 ```{r}
