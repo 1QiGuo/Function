@@ -255,3 +255,14 @@ It can generate 26 colors.
 Colors are all from distinctive journals.
 9 colors
 
+# pdf
+```{R}
+setwd(result_path)
+pdf("2_3_nonoise_geneset3.pdf",         # File name
+    width = 10, height = 10, # Width and height in inches
+    bg = "white" ,         # Background color
+    colormodel = "cmyk"  )  # Color model (cmyk is required for most publications)
+#paper = "A4") 
+p2_3
+```
+dev.off() 
