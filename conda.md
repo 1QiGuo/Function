@@ -49,6 +49,15 @@ conda remove -n condaname all
 ```{r}
 conda env list
 ```
+
+## Add conda to jupyter
+```{r}
+conda install ipykernel
+python -m ipykernel install --user --name commot2 --display-name "commot2"
+
+#check all environment in jupyter
+jupyter kernelspec list
+```
 Please refer to [this website](https://blog.csdn.net/weixin_47381639/article/details/119798672)
 
 # Git to connect github repositories
