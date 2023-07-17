@@ -52,3 +52,13 @@ https://maveric-informatics.readthedocs.io/en/latest/OSC.html
 ```{r}
 scp -r guoqi@192.148.247.179:/fs/ess/PCON0022/guoqi/NC-snrna/atac_output/temp ./rawdata/temp
 ```
+# Run sh script
+```
+/bin/bash .command.sh
+```
+
+# Find specific file in this path
+```
+cd path
+find ./ -iname projection*
+```
