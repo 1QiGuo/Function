@@ -1,5 +1,6 @@
 # Convert gene symbol to ensemble (mouse)
 
+The function getBM is the basic function that is used to convert gene names in a species.
 ```{R}
 library(biomaRt)
 httr::set_config(httr::config(ssl_verifypeer = FALSE))
@@ -18,9 +19,10 @@ intersect_gene<-Reduce(intersect, gene_list)
 ```
 
 #  converting gene names of mouse and human
+
 input: (character)gene names
 output: (dataframe)mouse names and human names
-
+The function getLDS is the basic function that is used to convert gene names in across species.
 ```{r}
 library(biomaRt)
 human <- useMart("ensembl",dataset="hsapiens_gene_ensembl")
