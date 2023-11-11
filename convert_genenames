@@ -1,1 +1,16 @@
+# Convert gene symbol to ensemble (mouse)
+library(biomaRt)
+httr::set_config(httr::config(ssl_verifypeer = FALSE))
+library("org.Mm.eg.db")
+ensembl_mart <- useMart(biomart = "ensembl", dataset = "mmusculus_gene_ensembl")
+
+z <- getBM(c("ensembl_gene_id","mgi_symbol"), values = gene_hugo, mart = ensembl_mart)
+#create gene list
+gene_list<-list()
+for(i in 1:length(health_list_1108)){
+  gene_hugo<-rownames(health_list_1108[[i]])
+  z <- getBM(c("ensembl_gene_id","mgi_symbol"), filters = "mgi_symbol", values = gene_hugo,mart = ensembl_mart)
+  gene_list[[i]]<-z$ensembl_gene_id
+}
+intersect_gene<-Reduce(intersect, gene_list)
 
