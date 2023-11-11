@@ -1,4 +1,6 @@
 # Convert gene symbol to ensemble (mouse)
+
+```{R}
 library(biomaRt)
 httr::set_config(httr::config(ssl_verifypeer = FALSE))
 library("org.Mm.eg.db")
@@ -13,4 +15,4 @@ for(i in 1:length(health_list_1108)){
   gene_list[[i]]<-z$ensembl_gene_id
 }
 intersect_gene<-Reduce(intersect, gene_list)
-
+```
