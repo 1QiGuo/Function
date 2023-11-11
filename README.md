@@ -385,16 +385,7 @@ closebess_centrality_gene_names <- names(sort(closebess_centrality,decreasing = 
 gene_from_8Module <- c(gene_from_8Module,closebess_centrality_gene_names)
 }
 ```
-## converting gene names of mouse and human
-input: (character)gene names
-output: (dataframe)mouse names and human names
-```{r}
-library(biomaRt)
-human <- useMart("ensembl",dataset="hsapiens_gene_ensembl")
-mouse <- useMart("ensembl",dataset="mmusculus_gene_ensembl")
-geneMn <- rownames(mtx)
-geneHs <- getLDS(attributes = "mgi_symbol",filters="mgi_symbol",values= geneMn,mart=mouse,attributesL = "hgnc_symbol",martL=human,uniqueRows = TRUE)
-```
+
 # match
 ```{r}
 match(x,y)
