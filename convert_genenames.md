@@ -16,3 +16,15 @@ for(i in 1:length(health_list_1108)){
 }
 intersect_gene<-Reduce(intersect, gene_list)
 ```
+
+#  converting gene names of mouse and human
+input: (character)gene names
+output: (dataframe)mouse names and human names
+
+```{r}
+library(biomaRt)
+human <- useMart("ensembl",dataset="hsapiens_gene_ensembl")
+mouse <- useMart("ensembl",dataset="mmusculus_gene_ensembl")
+geneMn <- rownames(mtx)
+geneHs <- getLDS(attributes = "mgi_symbol",filters="mgi_symbol",values= geneMn,mart=mouse,attributesL = "hgnc_symbol",martL=human,uniqueRows = TRUE)
+```
