@@ -62,3 +62,7 @@ scp -r guoqi@192.148.247.179:/fs/ess/PCON0022/guoqi/NC-snrna/atac_output/temp ./
 cd path
 find ./ -iname projection*
 ```
+# Check object storage
+```
+du -ah
+```
