@@ -43,7 +43,7 @@ conda deactivate
 ```
 ## Delete a conda
 ```{r}
-conda remove -n condaname all
+conda remove -n condaname --all
 ```
 ## Look up all conda environment  
 ```{r}
