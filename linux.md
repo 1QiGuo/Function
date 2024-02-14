@@ -69,3 +69,8 @@ find . -type f -name "*h5Seurat*"
 ```
 du -ah
 ```
+
+# Show all files including hidden
+```
+ls -a
+```
