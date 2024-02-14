@@ -57,10 +57,13 @@ scp -r guoqi@192.148.247.179:/fs/ess/PCON0022/guoqi/NC-snrna/atac_output/temp ./
 /bin/bash .command.sh
 ```
 
-# Find specific file in this path
+# Find specific file 
 ```
+specific file in this path
 cd path
 find ./ -iname projection*
+#find specific file in all path
+find . -type f -name "*h5Seurat*"
 ```
 # Check object storage
 ```
