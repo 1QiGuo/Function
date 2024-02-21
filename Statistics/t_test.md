@@ -1,4 +1,4 @@
-Do not use this if all assumtions have been satisfied.
+Do not use this if all assumptions have been satisfied, otherwise, wilcoxon.
 
 # Samples are normal distribution
 
