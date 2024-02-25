@@ -74,3 +74,23 @@ du -ah
 ```
 ls -a
 ```
+
+# OSC
+
+## create sh command
+```{r}
+#!/bin/bash
+#SBATCH --job-name=directnet_examp
+#SBATCH --time=20:50:59
+#SBATCH --output="directnet_sh_out"
+#SBATCH --account=PCON0022
+#SBATCH --mem=150GB
+#SBATCH --mail-type=BEGIN,END,FAIL
+
+cd /fs/ess/PCON0022/guoqi/Yang/Stream/Directnet
+start=`date +%s`
+module load R/4.1.0-gnu9.1
+Rscript /fs/ess/PCON0022/guoqi/Yang/Stream/Directnet/Directnet.r
+end=`date +%s`
+echo Execution time was `expr $end - $start` seconds.
+```
