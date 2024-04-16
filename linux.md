@@ -94,3 +94,26 @@ Rscript /fs/ess/PCON0022/guoqi/Yang/Stream/Directnet/Directnet.r
 end=`date +%s`
 echo Execution time was `expr $end - $start` seconds.
 ```
+
+# Change file name in batch
+```
+for file in *_expression*; do     mv -- "$file" "${file//_expression}"; done
+for file in sim_*; do     new_name=$(echo "$file" | sed 's/_/-/g');     mv "$file" "$new_name"; done
+for file in *.h5ad*; do
+    newname="${file/.h5ad/_sim_sim_expression.h5ad}"
+    mv -- "$file" "$newname"
+done
+for file in *.h5Seurat*; do
+    newname="${file/.h5Seurat/_sim_sim_expression.h5Seurat}"
+    mv -- "$file" "$newname"
+done
+
+for file in *_xy*; do     mv -- "$file" "${file//_xy}"; done
+for file in sim_*; do     new_name=$(echo "$file" | sed 's/_/-/g');     mv "$file" "$new_name"; done
+for file in *.csv*; do
+    newname="${file/.csv/_sim_sim_xy.csv}"
+    mv -- "$file" "$newname"
+done
+```
+
+
