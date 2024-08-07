@@ -115,5 +115,24 @@ for file in *.csv*; do
     mv -- "$file" "$newname"
 done
 ```
+# Submit jobs on VP3
 
+## Submit
 
+```
+conda activate virtualenvironment
+nohup python ./05_Subcluster_integration_evaluate.py > output_05.txt 2>&1 &
+```
+## Check jobs
+
+```
+jobs
+```
+
+## Check id and cancel
+
+```
+ps aux | grep 04_Integration_scvi.py
+#id is the first number in the first row : 633763
+kill id
+```
