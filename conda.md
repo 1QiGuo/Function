@@ -72,3 +72,23 @@ git clone https://github.com/jxLiu-bio/SpaGFT
 ## error
 “ERROR: Exception:
 Traceback (most recent call last):”-------Turn off VPN
+
+# uv
+
+## install uv in a specific folder
+
+```{r}
+uv venv --python 3.10
+source .venv/bin/activate
+
+uv pip install numpy==1.26.0 seaborn matplotlib pandas tabulate linetimer scikit-learn ipykernel 'scanpy[leiden]' tqdm pyyaml tensorboard h5py psutil
+uv pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 --index-url https://download.pytorch.org/whl/cu121
+```
+
+## submit job
+
+```{r}
+nohup uv run python ML_scvi_merged.py > output_ml_merged.log 2>&1 &
+```
+
+
