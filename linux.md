@@ -115,19 +115,8 @@ for file in *.csv*; do
     mv -- "$file" "$newname"
 done
 ```
-# Submit jobs on VP3
 
-## Submit
-
-```
-conda activate virtualenvironment
-nohup python ./05_Subcluster_integration_evaluate.py > output_05.txt 2>&1 &
-```
-## Check jobs
-
-```
-jobs
-```
+# VP03
 
 ## Check id and cancel
 
@@ -138,4 +127,46 @@ kill id
 ```
 
 
+## Enter a conda environment
+
+```{r}
+conda activate ...
+```
+
+
+## Submit the r script
+
+```{r}
+nohup Rscript --no-save 05_integrateallct.r > output_05allctintegrate_r.log 2>&1 &
+```
+
+## Submit the Python script
+
+```{r}
+nohup python ML_microglia_vali_1.2.py > output_1.2.log 2>&1 &
+```
+
+## Jobs
+
+```{r}
+jobs
+jobs -ll
+kills ...
+
+top
+```
+
+## check the save
+
+```{r}
+
+du -sh */
+```
+
+## make a fake folder
+
+```{r}
+ln -s 'new folder' 'old folder'
+ln -s /bmbl_data/qiguo/conda_envs/scvi-env /home/qiguo/.conda/envs/qi/envs/
+```
 
