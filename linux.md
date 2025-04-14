@@ -170,3 +170,7 @@ ln -s 'new folder' 'old folder'
 ln -s /bmbl_data/qiguo/conda_envs/scvi-env /home/qiguo/.conda/envs/qi/envs/
 ```
 
+# check GPU
+```{r}
+nvidia-smi
+```
