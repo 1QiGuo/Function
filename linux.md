@@ -4,13 +4,16 @@ chmod /fs/project/PAS1475/guoqi/spatial_data/ -R 777
 chmod -R 777 *  
 **Note: do not use blank when name folder**  
 
-## compress and decompress file 
-### compress
+# compress and decompress file 
+
+## compress
+
 ```{r}
 gzip FileName
+zip -r my_folder.zip my_directory_to_zip
 ```
 
-### decompress file
+## decompress file
 end with zip
 ```{r}
 unzip FileName.zip
