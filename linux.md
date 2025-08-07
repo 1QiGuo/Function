@@ -50,6 +50,7 @@ sbatch xxx.sh
 qstat jobname
 qstat -u guoqi
 https://maveric-informatics.readthedocs.io/en/latest/OSC.html
+scancel 12345
 ```
 # transfer file by remote server
 ```{r}
