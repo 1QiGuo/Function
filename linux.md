@@ -150,6 +150,7 @@ nohup Rscript --no-save 05_integrateallct.r > output_05allctintegrate_r.log 2>&1
 
 ```{r}
 nohup python ML_microglia_vali_1.2.py > output_1.2.log 2>&1 &
+nohup /bmbl_data/qiguo/conda_envs/scvi-env/bin/python ./healthy_mic_evaluatebatch.py > output_batch.log 2>&1 &
 ```
 
 ## Jobs
