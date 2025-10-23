@@ -97,8 +97,10 @@ module load R/4.1.0-gnu9.1
 Rscript /fs/ess/PCON0022/guoqi/Yang/Stream/Directnet/Directnet.r
 end=`date +%s`
 echo Execution time was `expr $end - $start` seconds.
-#load conda
+#load conda in osc
  module load pytorch/2.5.0
+#load conda in cursor
+module load pytorch/2.8.0
 ```
 
 # Change file name in batch
