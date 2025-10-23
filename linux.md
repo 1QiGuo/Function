@@ -183,3 +183,9 @@ ln -s /bmbl_data/qiguo/conda_envs/scvi-env /home/qiguo/.conda/envs/qi/envs/
 ```{r}
 nvidia-smi
 ```
+
+# in cursor, navigate to specific folder
+```{r}
+cd /fs/ess/PAS1475/guoqi/Gut_project/Model
+cursor .
+```
