@@ -134,6 +134,10 @@ ps aux | grep 04_Integration_scvi.py
 kill id
 ```
 
+```
+ps -p 1704024
+tail -f output_IEG_remove_marsh_int_r.log
+```
 
 ## Enter a conda environment
 
