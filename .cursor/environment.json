@@ -1,0 +1,4 @@
+{
+  "name": "Function bioinformatics notes",
+  "install": "bash ./.cursor/install.sh"
+}
